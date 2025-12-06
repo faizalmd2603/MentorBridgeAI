@@ -37,19 +37,21 @@ export const getGeminiResponse = async (
     if (image) {
       const match = image.match(/^data:(.+);base64,(.+)$/);
       if (match) {
-        msgContent = [
-          { text: message || "Analyze this image" },
-          { 
-            inlineData: { 
-              mimeType: match[1], 
-              data: match[2] 
-            } 
-          }
-        ];
+        msgContent = {
+          parts: [
+            { text: message || "Analyze this image" },
+            { 
+              inlineData: { 
+                mimeType: match[1], 
+                data: match[2] 
+              } 
+            }
+          ]
+        };
       }
     }
 
-    const result: GenerateContentResponse = await chatSession.sendMessage(msgContent);
+    const result: GenerateContentResponse = await chatSession.sendMessage({ message: msgContent });
 
     return result.text || "I'm sorry, I couldn't generate a response.";
   } catch (error) {
