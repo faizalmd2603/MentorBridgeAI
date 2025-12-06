@@ -25,7 +25,22 @@ export const TRANSLATIONS: Record<Language, Translation> = {
     placeholder: "Type your message here...",
     developerInfo: "About MentorBridge & Developer",
     contactMe: "Contact Me",
-    footer: "Made with ❤️ by Mohammed Faizal, B.Com student, shift 1, The New College, Chennai."
+    footer: "Made with ❤️ by Mohammed Faizal, B.Com student, shift 1, The New College, Chennai.",
+    errorFillFields: "Please fill in all fields",
+    errorUserNotFound: "Account not found. Please Sign Up.",
+    errorIncorrectPassword: "Incorrect password.",
+    errorUserExists: "User already exists. Please Login.",
+    errorPasswordMismatch: "Passwords do not match",
+    termsTitle: "Community Guidelines & Usage Rules",
+    termsAccept: "I Understand & Accept",
+    termsList: [
+      "AI Verification: This app uses Artificial Intelligence. While helpful, always verify career and financial advice with official sources.",
+      "Respectful Communication: Use professional and respectful language when interacting with the AI agents.",
+      "Data Privacy: Your chat history and progress are stored locally on this device. We prioritize your privacy.",
+      "Free Education: This platform is free for students and professionals. Do not use it for illegal activities."
+    ],
+    loginHelpTitle: "How to Login",
+    loginHelpText: "Since this is a demo app: \n1. Sign Up with any email/name. \n2. No email verification required. \n3. Passwords are case-sensitive. \n4. 'Remember Me' is active by default."
   },
   ta: {
     welcome: "மெண்டர்பிரிட்ஜ்",
@@ -51,7 +66,22 @@ export const TRANSLATIONS: Record<Language, Translation> = {
     placeholder: "உங்கள் செய்தியை இங்கே தட்டச்சு செய்யவும்...",
     developerInfo: "மெண்டர்பிரிட்ஜ் மற்றும் டெவலப்பர் பற்றி",
     contactMe: "தொடர்பு கொள்ள",
-    footer: "Made with ❤️ by Mohammed Faizal, B.Com student, shift 1, The New College, Chennai."
+    footer: "Made with ❤️ by Mohammed Faizal, B.Com student, shift 1, The New College, Chennai.",
+    errorFillFields: "தயவுசெய்து அனைத்து விவரங்களையும் நிரப்பவும்",
+    errorUserNotFound: "கணக்கு காணப்படவில்லை. தயவுசெய்து பதிவு செய்யவும்.",
+    errorIncorrectPassword: "தவறான கடவுச்சொல்.",
+    errorUserExists: "பயனர் ஏற்கனவே உள்ளார். தயவுசெய்து உள்நுழையவும்.",
+    errorPasswordMismatch: "கடவுச்சொற்கள் பொருந்தவில்லை",
+    termsTitle: "சமூக வழிகாட்டுதல்கள் & விதிகள்",
+    termsAccept: "நான் படித்து ஏற்றுக்கொள்கிறேன்",
+    termsList: [
+      "AI சரிபார்ப்பு: இந்த செயலி AI தொழில்நுட்பத்தைப் பயன்படுத்துகிறது. முக்கியமான தகவல்களை அதிகாரப்பூர்வ மூலங்களுடன் சரிபார்க்கவும்.",
+      "மரியாதையான தொடர்பு: AI உடன் பேசும்போது கண்ணியமான மொழியைப் பயன்படுத்தவும்.",
+      "தரவு பாதுகாப்பு: உங்கள் தகவல்கள் இந்த சாதனத்தில் மட்டுமே சேமிக்கப்படும்.",
+      "இலவச கல்வி: இது மாணவர்களுக்கான இலவச தளம். தவறான பயன்பாட்டிற்கு அனுமதியில்லை."
+    ],
+    loginHelpTitle: "உள்நுழைவது எப்படி?",
+    loginHelpText: "இது ஒரு மாதிரி செயலி என்பதால்: \n1. எந்த மின்னஞ்சலையும் பயன்படுத்தி பதிவு செய்யலாம். \n2. மின்னஞ்சல் சரிபார்ப்பு தேவையில்லை. \n3. கடவுச்சொல் நினைவில் கொள்ளப்படும்."
   }
 };
 

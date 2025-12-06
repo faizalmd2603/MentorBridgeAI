@@ -11,6 +11,7 @@ export interface ChatMessage {
   id: string;
   role: 'user' | 'model';
   text: string;
+  image?: string;
   timestamp: Date;
 }
 
@@ -45,4 +46,14 @@ export interface Translation {
   developerInfo: string;
   contactMe: string;
   footer: string;
+  errorFillFields: string;
+  errorUserNotFound: string;
+  errorIncorrectPassword: string;
+  errorUserExists: string;
+  errorPasswordMismatch: string;
+  termsTitle: string;
+  termsAccept: string;
+  termsList: string[];
+  loginHelpTitle: string;
+  loginHelpText: string;
 }

@@ -9,7 +9,8 @@ let currentLang: Language | null = null;
 export const getGeminiResponse = async (
   message: string, 
   mode: string, 
-  lang: Language
+  lang: Language,
+  image?: string
 ): Promise<string> => {
   try {
     const apiKey = process.env.API_KEY;
@@ -31,9 +32,24 @@ export const getGeminiResponse = async (
       currentLang = lang;
     }
 
-    const result: GenerateContentResponse = await chatSession.sendMessage({
-      message: message
-    });
+    let msgContent: any = message;
+
+    if (image) {
+      const match = image.match(/^data:(.+);base64,(.+)$/);
+      if (match) {
+        msgContent = [
+          { text: message || "Analyze this image" },
+          { 
+            inlineData: { 
+              mimeType: match[1], 
+              data: match[2] 
+            } 
+          }
+        ];
+      }
+    }
+
+    const result: GenerateContentResponse = await chatSession.sendMessage(msgContent);
 
     return result.text || "I'm sorry, I couldn't generate a response.";
   } catch (error) {
